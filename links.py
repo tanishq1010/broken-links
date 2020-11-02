@@ -62,6 +62,7 @@ class Source(object):
                     videos = False
 
             except Exception as e:
+                # print(response1.json()["message"])
                 print(traceback.format_exc())
                 videos = False
 
@@ -78,10 +79,14 @@ class Source(object):
                 if response2.status_code == 200:
                     prerequisite = True
                 else:
+                    # print("#$@$$$$$$")
                     prerequisite = False
             except Exception as e:
                 print(traceback.format_exc())
+
+                # print(response2.json()["message"])
                 prerequisite = False
+                # print("---------------",e)
 
             payload3 = {
                 'learnmap_id': learnmap_id,
@@ -91,7 +96,7 @@ class Source(object):
             response3 = self.callAPI(
                 "https://preprodms.embibe.com/fiber_ms/chapterTopics",
                 json.dumps(payload3), 'POST')
-            # print(response3.status_code)
+            print(response3.status_code)
             try:
                 print("all topics :", response3.status_code)
                 if response3.status_code == 200:
@@ -116,7 +121,7 @@ class Source(object):
 
             try:
                 print("all tests :", response4.status_code)
-                if response4.status_code == 200:
+                if response4.status_code == 200 and response4.json()!=[] :
                     test = True
                 else:
                     test = False
