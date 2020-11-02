@@ -26,21 +26,21 @@ def for_all_exam_goal(goal_exam_grade):
 
 
 if __name__ == '__main__':
-    # df_negative_results = pd.DataFrame(columns=['Child_ID', 'Exam', 'Goal', "Grade",
-    #                                             'Title', 'Type', 'Format_refrence', 'Section_name', 'Subject',
-    #                                             'Subject_tagged', 'Learnpath_name', 'Learnmap_id',"Chapter"])
-    # df_positive_results = pd.DataFrame(columns=['Child_ID', 'Exam', 'Goal', "Grade",
-    #                                             'Title', 'Type', 'Format_refrence', 'Section_name', 'Subject',
-    #                                             'Subject_tagged', 'Learnpath_name', 'Learnmap_id',"Chapter"])
-    # df_negative_results.to_csv("negative_learn_results.csv", index=False)
-    # df_positive_results.to_csv("positive_learn_results.csv", index=False)
+    df_negative_results = pd.DataFrame(columns=['Child_ID', 'Exam', 'Goal', "Grade",
+                                                'Title', 'Type', 'Format_refrence', 'Section_name', 'Subject',
+                                                'Subject_tagged', 'Learnpath_name', 'Learnmap_id',"Chapter"])
+    df_positive_results = pd.DataFrame(columns=['Child_ID', 'Exam', 'Goal', "Grade",
+                                                'Title', 'Type', 'Format_refrence', 'Section_name', 'Subject',
+                                                'Subject_tagged', 'Learnpath_name', 'Learnmap_id',"Chapter"])
+    df_negative_results.to_csv("negative_learn_results.csv", index=False)
+    df_positive_results.to_csv("positive_learn_results.csv", index=False)
     df_links = pd.DataFrame(columns=['Child_ID', 'Exam', 'Goal', "Grade",
                                                 'Title', 'Type', 'Format_refrence', 'Section_name', 'Subject',
                                                 'Subject_tagged', 'Learnpath_name', 'Learnmap_id', "Chapter","all videos  api present","topics in this chapter api present","prerequisite topic api present","tests in this chapter api present","practice on this chapter api present"])
     df_links.to_csv("broken links.csv",index=False)
-    # goal_exam_grade = goal_exam_grade_extractor()
-    # df=pd.read_csv("goal_exams.csv")
-    # for_all_exam_goal(goal_exam_grade)
+    goal_exam_grade = goal_exam_grade_extractor()
+   # # df=pd.read_csv("goal_exams.csv")
+    for_all_exam_goal(goal_exam_grade)
     df=pd.read_csv("positive_learn_results.csv")
 
     broken_link(df)
