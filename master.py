@@ -15,11 +15,11 @@ from login_sign_up import *
 def for_all_exam_goal(goal_exam_grade):
     for ind in goal_exam_grade.index:
         print(goal_exam_grade["Goal"][ind], goal_exam_grade["Exam_name"][ind])
-        signup_data = Signup()
-        login_data = login(signup_data[0], "embibe1234")
-        # child_data=add_user(signup_data[1],login_data[0])
-        embibe_token = login_data[1]
-        child_id = signup_data[1]
+        # signup_data = Signup()
+        # login_data = login(signup_data[0], "embibe1234")
+        # # child_data=add_user(signup_data[1],login_data[0])
+        # embibe_token = login_data[1]
+        # child_id = signup_data[1]
         home_data(3615594, goal_exam_grade["Goal"][ind], goal_exam_grade["Grade"][ind],
                   goal_exam_grade["Exam_name"][ind],
                   goal_exam_grade["Goal"][ind], 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoic3R1ZGVudCIsInRpbWVfc3RhbXAiOiIyMDIwLTExLTAyIDA3OjM2OjM5IFVUQyIsImlzX2d1ZXN0IjpmYWxzZSwiaWQiOjM2MTU1OTQsImVtYWlsIjoiYzEzNDEzOGUwNDc1QGppby1lbWJpYmUuY29tIn0.wC4cNu2D6LAWpWfWPPVL_ErT6X5kW4MfXNNiQqxQw3CbVl_eZHbaScYpXvOY93axd1HU14ITXEvObmHG5sE9Hg')
