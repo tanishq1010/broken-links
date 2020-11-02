@@ -32,7 +32,8 @@ class Source(object):
             "exam": exam,
             "exam_name": exam,
             "goal": goal,
-            "grade": grade
+            "grade": grade,
+            "fetch_all_content":"true"
         }
 
         response1 = self.callAPI(
