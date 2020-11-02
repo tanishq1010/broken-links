@@ -4,8 +4,8 @@ import pandas as pd
 from links import  broken_link
 
 from login_sign_up import *
-from embibe_explainers_home import embibe_explainers_learn
-from CG_embibe_explainers import *
+# from embibe_explainers_home import embibe_explainers_learn
+# from CG_embibe_explainers import *
 
 
 # from miscellaneous import *
