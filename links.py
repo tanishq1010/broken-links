@@ -91,7 +91,7 @@ class Source(object):
             response3 = self.callAPI(
                 "https://preprodms.embibe.com/fiber_ms/chapterTopics",
                 json.dumps(payload3), 'POST')
-            print(response3.status_code)
+            # print(response3.status_code)
             try:
                 print("all topics :", response3.status_code)
                 if response3.status_code == 200:
