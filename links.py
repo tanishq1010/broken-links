@@ -54,7 +54,7 @@ class Source(object):
                 '{}', 'GET')
 
             try:
-                print("all videos :" ,response1.status_code)
+                #print("all videos :" ,response1.status_code)
 
                 if response1.status_code == 200:
                     videos = True
@@ -75,7 +75,7 @@ class Source(object):
                 json.dumps(payload2), 'POST')
             # print(response2)
             try:
-                print("all prerequisite :", response2.status_code)
+                #print("all prerequisite :", response2.status_code)
                 if response2.status_code == 200:
                     prerequisite = True
                 else:
@@ -98,7 +98,7 @@ class Source(object):
                 json.dumps(payload3), 'POST')
             # print(response3.status_code)
             try:
-                print("all topics :", response3.status_code)
+                #print("all topics :", response3.status_code)
                 if response3.status_code == 200:
                     topics = True
                 else:
@@ -120,7 +120,7 @@ class Source(object):
                 json.dumps(payload4), 'POST')
 
             try:
-                print("all tests :", response4.status_code)
+                #print("all tests :", response4.status_code)
                 if response4.status_code == 200 and response4.json()!=[] :
                     test = True
                 else:
@@ -137,7 +137,7 @@ class Source(object):
                 "https://preprodms.embibe.com/fiber_ms/chapterPractices",
                 json.dumps(payload5), 'POST')
             try:
-                print("all practice :", response5.status_code)
+                #print("all practice :", response5.status_code)
                 if response5.status_code == 200:
                     practice = True
                 else:
